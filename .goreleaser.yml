@@ -6,7 +6,7 @@ release:
   # Default is extracted from the origin remote URL or empty if its private hosted.
   # Note: it can only be one: either github or gitlab or gitea
   github:
-    owner: skycoin
+    owner: i-hate-nicknames
     name: skywire
 
 before:
@@ -28,6 +28,8 @@ builds:
     ignore:
       - goos: darwin
         goarch: 386
+      - goos: darwin
+        goarch: arm64
     env:
       - CGO_ENABLED=0
     main: ./cmd/skywire-visor/
